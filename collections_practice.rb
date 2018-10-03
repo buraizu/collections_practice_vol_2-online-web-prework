@@ -67,23 +67,22 @@ end
 
 # combines two nested data structures into one
 
-def merge_data (array1, array2)
-  counter = 0
-  return_array = []
-  while counter < array1.length
-    array2.each do |element|
-      element.each do |key, value|
-        if key == array1[counter][:first_name]
-        return_array[counter] = array1[counter].merge(array2)
-        counter += 1
+def merge_data ( keys, data)
+  merged_data = []
+  i = 0
+  while i < keys[0].length
+    data.each do |array|
+      array.each do |name, data|
+        if name == keys[i][:first_name]
+          merged_data[i] = keys[i].merge(data)
+          i += 1
         end
       end
     end
-    puts return_array
-  binding.pry
   end
-  
+  merged_data
 end
+
 
 
 def find_cool(array)
