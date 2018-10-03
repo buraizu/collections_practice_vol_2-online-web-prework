@@ -67,21 +67,7 @@ end
 
 # combines two nested data structures into one
 
-def merge_data (array1, array2)
-  counter = 0
-  return_array = []
-  while counter < array1[0].length
-    array2.each do |element|
-      element.each do |key, value|
-        if key == array1[counter][:first_name]
-        return_array[counter] = array1[counter].merge(array2)
-        counter += 1
-      end
-    end
-  end
-end
-  return return_array
-end
+
 
 
 
