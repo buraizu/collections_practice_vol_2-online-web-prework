@@ -67,21 +67,7 @@ end
 
 # combines two nested data structures into one
 
-def merge_data ( keys, data)
-  merged_data = []
-  i = 0
-  while i < keys[0].length
-    data.each do |array|
-      array.each do |name, data|
-        if name == keys[i][:first_name]
-          merged_data[i] = keys[i].merge(data)
-          i += 1
-        end
-      end
-    end
-  end
-  merged_data
-end
+
 
 
 
